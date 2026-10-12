@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Change</title>
+    <style>
+        #myBtn {
+            width:200px;
+            height: 60px;
+            font-size: 20px;
+            background-color: rgb(123, 67, 105);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <button id="myBtn">Change background</button>
+    <script>
+        let btn = document.getElementById("myBtn");
+        btn.onclick=function(){
+            document.body.style.backgroundColor="lightblue";
+        };
+    </script>
+</body>
+</html>
