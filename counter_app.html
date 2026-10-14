@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 350px;
+        }
+
+        h1 {
+            color: #4c1d95;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        #count {
+            font-size: 60px;
+            font-weight: bold;
+            color: #6d28d9;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #incBtn {
+            background-color: #7c3aed;
+            margin-right: 8px;
+        }
+
+        #decBtn {
+            background-color: #ec4899;
+        }
+
+        #incBtn:hover {
+            background-color: #5b21b6;
+            transform: translateY(-3px);
+        }
+
+        #decBtn:hover {
+            background-color: #be185d;
+            transform: translateY(-3px);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Counter App</h1>
+
+        <div id="count">0</div>
+
+        <button id="incBtn">Increment (+)</button>
+        <button id="decBtn">Decrement (-)</button>
+    </div>
+
+    <script>
+        let count = 0;
+
+        let countDisplay = document.getElementById("count");
+        let incBtn = document.getElementById("incBtn");
+        let decBtn = document.getElementById("decBtn");
+
+        incBtn.onclick = function() {
+            count++;
+            countDisplay.innerHTML = count;
+        };
+
+        decBtn.onclick = function() {
+            count--;
+            countDisplay.innerHTML = count;
+        };
+    </script>
+
+</body>
+</html>
+
