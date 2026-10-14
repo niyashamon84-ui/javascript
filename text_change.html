@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            color: #4c1d95;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background-color: #8b5cf6;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #6d28d9;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 id="txt">Hello World</h2>
+        <button id="btn">Change Text</button>
+    </div>
+
+    <script>
+        let txt = document.getElementById("txt");
+        let btn = document.getElementById("btn");
+
+        btn.onclick = function() {
+            txt.innerHTML = "Welcome to Javascript";
+        };
+    </script>
+
+</body>
+</html>
+

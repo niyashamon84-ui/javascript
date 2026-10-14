@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button Colour</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #4c1d95;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background-color: #8b5cf6;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Toggle Button Colour</h1>
+
+    <button id="btn">Change Colour</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let count = 0;
+
+        btn.onclick = function() {
+            count++;
+
+            if (count == 1) {
+                btn.style.backgroundColor = "lightpink";
+            }
+            else if (count == 2) {
+                btn.style.backgroundColor = "blue";
+                count = 0;
+            }
+        };
+    </script>
+
+</body>
+</html>
+
